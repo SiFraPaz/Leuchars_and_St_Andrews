@@ -23,13 +23,20 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-const map = L.map('map').setView([56.34, -2.80], 10);
+const bounds = [[56.24, -3.24], [56.49, -2.46]];
+
+const map = L.map('map', {
+    maxBounds: bounds,
+    maxBoundsViscosity: 1.0
+}).setView([56.34, -2.80], 10);
 
 L.tileLayer('./{z}/{x}/{y}.png', {
     minZoom: 6,
-    maxZoom: 16
+    maxZoom: 16,
+    bounds: bounds,
+    noWrap: true
 }).addTo(map);
 </script>
-
+  
 </body>
 </html>
