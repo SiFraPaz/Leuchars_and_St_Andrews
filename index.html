@@ -2,6 +2,50 @@
 <html>
 <head>
 <meta charset="utf-8">
+
+<title>Leuchars and St Andrews</title>
+
+<link
+  rel="stylesheet"
+  href/dist/leaflet.css
+
+<style>
+html,
+body,
+#map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="map"></div>
+
+https://unpkg.com/leaflet@1.9.4/dist/leaflet.jsscript>
+
+<script>
+
+var map = L.map('map');
+
+L.tileLayer('./{z}/{x}/{y}.png', {
+    minZoom: 6,
+    maxZoom: 16
+}).addTo(map);
+
+map.setView([56.34, -2.80], 10);
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
 <title>Leuchars and St Andrews</title>
 
 <link rel="stylesheet"
