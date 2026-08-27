@@ -36,6 +36,14 @@ L.tileLayer('./{z}/{x}/{y}.png', {
     bounds: bounds,
     noWrap: true
 }).addTo(map);
+
+  console.log("Kartenzentrum:", map.getCenter());
+
+map.on('moveend', function() {
+    console.log("Neues Zentrum:", map.getCenter());
+    console.log("Zoom:", map.getZoom());
+});
+  
 </script>
   
 </body>
